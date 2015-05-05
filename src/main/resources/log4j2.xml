@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	  <!--<Properties>-->
+	    <!--<Property name="filename">target/test.log</Property>-->
+	  <!--</Properties>-->
+
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<!--<File name="TanxProducerFile" fileName="target/producer.log" append="false">    -->
+     		<!--<PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %class{36} %L %M - %msg%xEx%n"/>    -->
+    	<!--</File>-->
+    	<!--<File name="TanxConsumerFile" fileName="target/consumer.log" append="false">    -->
+     		<!--<PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %class{36} %L %M - %msg%xEx%n"/>    -->
+    	<!--</File>-->
+    	<!--<File name="AmaxProducerFile" fileName="target/amaxProducer.log" append="false">    -->
+     		<!--<PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %class{36} %L %M - %msg%xEx%n"/>    -->
+    	<!--</File>-->
+    	<!--<File name="AmaxConsumerFile" fileName="target/amaxConsumer.log" append="false">    -->
+     		<!--<PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %class{36} %L %M - %msg%xEx%n"/>    -->
+    	<!--</File>-->
+    	<File name="File" fileName="./target/test.log" append="false">
+     		<PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %class{36} %L %M - %msg%xEx%n"/>    
+    	</File> 
+	</Appenders>
+	<Loggers>
+	
+		<!--<logger name="com.pxene.TanxFileConsumer" level="INFO" additivity="false">    -->
+	        <!--<appender-ref ref="Console" />-->
+	        <!--<appender-ref ref="TanxConsumerFile" />-->
+    	<!--</logger>-->
+    	<!--<logger name="com.pxene.TanxFileProducer" level="INFO" additivity="false">    -->
+	        <!--<appender-ref ref="Console" />-->
+	        <!--<appender-ref ref="TanxProducerFile" />-->
+    	<!--</logger>-->
+    	<!--<logger name="com.pxene.AmaxFileConsumer" level="INFO" additivity="false">    -->
+	        <!--<appender-ref ref="Console" />-->
+	        <!--<appender-ref ref="AmaxConsumerFile" />-->
+    	<!--</logger>-->
+    	<!--<logger name="com.pxene.AmaxFileProducer" level="INFO" additivity="false">    -->
+	        <!--<appender-ref ref="Console" />-->
+	        <!--<appender-ref ref="AmaxProducerFile" />-->
+    	<!--</logger>-->
+		<Root level="INFO">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="File" />
+		</Root>
+	</Loggers>
+</Configuration>
